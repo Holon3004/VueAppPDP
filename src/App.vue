@@ -14,7 +14,8 @@ export default {
   name: 'App',
   components: {
     BigSquare,
-    LittleSquare, MainPanel,
+    LittleSquare,
+    MainPanel,
   }
 }
 </script>
