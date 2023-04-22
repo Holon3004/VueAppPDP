@@ -1,8 +1,8 @@
 <template>
   <svg>
     <rect
-        style="fill:#0000ff;stroke:#0000ff;stroke-width:1"
         id="rect923"
+        class="rect923"
         width="40"
         height="40"
         x={{x}}
@@ -18,5 +18,9 @@ export default {
 </script>
 
 <style scoped>
-
+.rect923{
+  fill:#0000ff;
+  stroke:#0000ff;
+  stroke-width:1
+}
 </style>
