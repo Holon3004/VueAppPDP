@@ -1,12 +1,14 @@
 <template>
-  <svg>
+  <svg
+    width="75"
+    height="80">
     <rect
           id="rect925"
           class="rect925"
           width="75"
           height="80"
-          x={{y}}
-          y={{x}} />
+          x=0
+          y=0 />
   </svg>
 </template>
 
