@@ -1,8 +1,9 @@
 <template>
   <svg
-      class="u_svg"
+      class="u_svgl"
     width="40"
-    height="40">
+    height="40"
+    :style= "cssVars">
     <rect
         id="rect923"
         class="rect923"
@@ -18,25 +19,33 @@ export default {
   name: "LittleSquare",
   props: ['x', 'y'],
   data(){
-        document.body.style.setProperty("--pos-l-x", this.x+'px'),
-        document.body.style.setProperty("--pos-l-y", this.y+'px')
+        //document.body.style.setProperty("--pos-b-x", this.x+'px'),
+        //document.body.style.setProperty("--pos-b-y", this.y+'px')
+  },
+  computed:{
+    cssVars(){
+      return{
+        '--pos-l-x': this.x + 'px',
+        '--pos-l-y': this.y + 'px'
+      }
+    }
   }
 }
 </script>
 
 <style scoped>
-:root{
-  --pos-l-x:0px;
-  --pos-l-y:0px;
-}
+
 .rect923{
   fill:#0000ff;
   stroke:#0000ff;
   stroke-width:1
 }
-.u_svg{
+.u_svgl{
+  --pos-l-x: 0px;
+  --pos-l-y: 0px;
   position: absolute;
   left: var(--pos-l-x);
-  top: var(--pos-l-y);
+  top:var(--pos-l-y);
 }
+
 </style>
