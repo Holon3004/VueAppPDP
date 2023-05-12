@@ -1,6 +1,6 @@
 <template>
   <little-square :x="30" :y="35"/>
-  <big-square :x="30" :y="110"/>
+  <big-square :x="300" :y="150"/>
 </template>
 
 <script>

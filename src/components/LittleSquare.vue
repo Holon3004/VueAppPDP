@@ -18,10 +18,8 @@ export default {
   name: "LittleSquare",
   props: ['x', 'y'],
   data(){
-    let x_s = this.x + "px";
-    let y_s = this.y + "px";
-    document.body.style.setProperty("--pos-l-x", x_s),
-        document.body.style.setProperty("--pos-l-y", y_s)
+        document.body.style.setProperty("--pos-l-x", this.x+'px'),
+        document.body.style.setProperty("--pos-l-y", this.y+'px')
   }
 }
 </script>

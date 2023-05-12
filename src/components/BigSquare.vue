@@ -18,10 +18,8 @@ export default {
   name: "BigSquare",
   props: ['x', 'y'],
   data(){
-    let x_s = this.x + "px";
-    let y_s = this.y + "px";
-        document.body.style.setProperty("--pos-b-x", x_s),
-        document.body.style.setProperty("--pos-b-y", y_s)
+        document.body.style.setProperty("--pos-b-x", this.x+'px'),
+        document.body.style.setProperty("--pos-b-y", this.y+'px')
   }
 }
 </script>
