@@ -1,9 +1,9 @@
 <template>
   <svg
-      class="u_svgb"
       width="75"
       height="75"
-      :style="cssVars">
+      :style= "cssVars"
+  >
     <rect
         id="rect925"
         class="rect925"
@@ -15,20 +15,11 @@
 </template>
 
 <script>
+import ElementWithPos from "@/components/ElementWithPos";
+
 export default {
   name: "BigSquare",
-  props: ['x', 'y'],
-  data(){
-    //alert(document.element.class)
-  },
-  computed:{
-    cssVars(){
-      return{
-        '--pos-b-x': this.x + 'px',
-        '--pos-b-y': this.y + 'px'
-      }
-    }
-  }
+  extends: ElementWithPos,
 }
 </script>
 
@@ -39,12 +30,4 @@ export default {
   stroke:#000000;
   stroke-width:1;
 }
-.u_svgb{
-  --pos-b-x: 0px;
-  --pos-b-y: 0px;
-  position: absolute;
-  left: var(--pos-b-x);
-  top: var(--pos-b-y);
-}
-
 </style>

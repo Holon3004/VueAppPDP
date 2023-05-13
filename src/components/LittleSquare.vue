@@ -1,6 +1,5 @@
 <template>
   <svg
-      class="u_svgl"
     width="40"
     height="40"
     :style= "cssVars">
@@ -15,21 +14,11 @@
 </template>
 
 <script>
+import ElementWithPos from "@/components/ElementWithPos";
+
 export default {
   name: "LittleSquare",
-  props: ['x', 'y'],
-  data(){
-        //document.body.style.setProperty("--pos-b-x", this.x+'px'),
-        //document.body.style.setProperty("--pos-b-y", this.y+'px')
-  },
-  computed:{
-    cssVars(){
-      return{
-        '--pos-l-x': this.x + 'px',
-        '--pos-l-y': this.y + 'px'
-      }
-    }
-  }
+  extends: ElementWithPos,
 }
 </script>
 
@@ -40,12 +29,4 @@ export default {
   stroke:#0000ff;
   stroke-width:1
 }
-.u_svgl{
-  --pos-l-x: 0px;
-  --pos-l-y: 0px;
-  position: absolute;
-  left: var(--pos-l-x);
-  top:var(--pos-l-y);
-}
-
 </style>
